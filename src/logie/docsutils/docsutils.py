@@ -10,8 +10,8 @@ from datetime import datetime
 __all__ = ['tmp2new', 'delete_tmp', "documenting", "log2donelog", "extract_log"]
 
 
-# @log: 함수 `tmp2new` 추가
-# @log: 함수 `tmp2new` 에 정말로 실행할 것인지 여부 묻는 부분 추가
+# [0.1.0] @done_log: 함수 `tmp2new` 추가
+# [0.1.0] @done_log: 함수 `tmp2new` 에 정말로 실행할 것인지 여부 묻는 부분 추가
 def tmp2new(path):
     string = textwrap.dedent(
         f"""
@@ -45,7 +45,7 @@ def tmp2new(path):
     return do
 
 
-# @log: 함수 `delete_tmp` 추가
+# [0.1.0] @done_log: 함수 `delete_tmp` 추가
 def delete_tmp(path):
     string = textwrap.dedent(
         f"""
@@ -76,11 +76,10 @@ def delete_tmp(path):
         print('tmp 파일을 보존합니다.')
     
 
-
-# @log: 기본적인 README 기록 형태를 제공하는 함수 `documenting` 추가
-# @log: 함수 `documenting` 내부에 README.md.tmp 파일 생성 추가
-# @log: 함수 `documenting` 에 덮어씌우기 인자 `overwrite` 추가
-# @log: 함수 `documenting` 에 출력 값에 줄바꿈인자를 포함
+# [0.1.0] @done_log: 기본적인 README 기록 형태를 제공하는 함수 `documenting` 추가
+# [0.1.0] @done_log: 함수 `documenting` 내부에 README.md.tmp 파일 생성 추가
+# [0.1.0] @done_log: 함수 `documenting` 에 덮어씌우기 인자 `overwrite` 추가
+# [0.1.0] @done_log: 함수 `documenting` 에 출력 값에 줄바꿈인자를 포함
 def documenting(tag, summary, version, log_contents, docs_path, docs_name="README.md", overwrite=False):
     now = datetime.now()
 
@@ -120,7 +119,7 @@ def documenting(tag, summary, version, log_contents, docs_path, docs_name="READM
         return log_entry
 
 
-# @log: 함수 `log2donelog` 에서 version 변수에 대한 입력 여부 결정 추가
+# [0.1.0] @done_log: 함수 `log2donelog` 에서 version 변수에 대한 입력 여부 결정 추가
 def log2donelog(file_path, version=None):
     try:
         # 파일 읽기
@@ -141,7 +140,7 @@ def log2donelog(file_path, version=None):
         pass
 
 
-# @log: `extract_logs_from_file` 의 함수명을 `extract_log` 로 변경
+# [0.1.0] @done_log: `extract_logs_from_file` 의 함수명을 `extract_log` 로 변경
 def extract_log(file_path):
     """
     파일 내부 주석 중 에서 @log: 로 시작하는 주석 문구를 추출합니다.

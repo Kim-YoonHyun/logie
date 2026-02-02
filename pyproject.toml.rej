@@ -1,0 +1,24 @@
+diff a/pyproject.toml b/pyproject.toml	(rejected hunks)
+@@ -50,15 +50,18 @@ all = [
+ ]
+ 
+ # 패키지 내 데이터 파일 포함 설정
+-["tool.setuptools"]
++[tool.setuptools]
+ include-package-data = true
+ 
+-["tool.setuptools.packages.find"]
+-where = ["."]
++[tool.setuptools.packages.find]
++where = [
++    "src",
++]
+ exclude = [
+     "test/",
+     "scripts/",
+-    "old/"
++    "old/",
++    "*.tmp",
+ ]
+ 
+ [tool.setuptools.package-data]

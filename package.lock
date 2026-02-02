@@ -1,0 +1,138 @@
+﻿{
+	"user_version": "0.0",
+	"package": {
+		"name": "logie",
+		"version": "0.2.4",
+		"resolved": {
+			"docs": "0.0.0",
+			"docs_ver": "0.0.1",
+			"scripts": "0.1.2",
+			"logie": "0.1.0",
+			".spec_grp": "0.0.1",
+			".integrity_grp": "0.0.0"
+		},
+		"exclude": [
+			"__pycache__",
+			"old",
+			"__version__.py",
+			"*.tmp",
+			"*.lock",
+			"*-info"
+		]
+	},
+	"component": [
+		{
+			"name": "docs",
+			"version": "0.0.0",
+			"requires": {},
+			"type": "Document",
+			"build": true,
+			"mode": "dir",
+			"form_c_path": "{pack_path}/{name}",
+			"path": "/home/kimyh/library/logie/docs",
+			"include": [
+				"*"
+			],
+			"bundle": [],
+			"exclude": [],
+			"untracked": []
+		},
+		{
+			"name": "docs_ver",
+			"version": "0.0.1",
+			"requires": {},
+			"type": "Document",
+			"build": false,
+			"mode": "dir",
+			"form_c_path": "{pack_path}/{name}",
+			"path": "/home/kimyh/library/logie/docs_ver",
+			"include": [
+				"*"
+			],
+			"bundle": [],
+			"exclude": [],
+			"untracked": [
+				"*.md"
+			]
+		},
+		{
+			"name": "scripts",
+			"version": "0.1.2",
+			"requires": {},
+			"type": "Tool",
+			"build": false,
+			"mode": "dir",
+			"form_c_path": "{pack_path}/{name}",
+			"path": "/home/kimyh/library/logie/scripts",
+			"include": [
+				"*"
+			],
+			"bundle": [],
+			"exclude": [],
+			"untracked": []
+		},
+		{
+			"name": "logie",
+			"version": "0.1.0",
+			"requires": {},
+			"type": "Module",
+			"build": true,
+			"mode": "dir",
+			"form_c_path": "{src_path}/{name}",
+			"path": "/home/kimyh/library/logie/src/logie",
+			"include": [
+				"*"
+			],
+			"bundle": [],
+			"exclude": [],
+			"untracked": []
+		},
+		{
+			"name": ".spec_grp",
+			"version": "0.0.1",
+			"requires": {},
+			"type": "Manifest",
+			"build": true,
+			"mode": "file_group",
+			"form_c_path": "{pack_path}/{name}",
+			"path": "/home/kimyh/library/logie",
+			"include": [
+				".cruft.json",
+				"manifest.json",
+				"pyproject.toml",
+				"README.md"
+			],
+			"bundle": [],
+			"exclude": [],
+			"untracked": [
+				"pyproject.toml",
+				"README.md"
+			]
+		},
+		{
+			"name": ".integrity_grp",
+			"version": "0.0.0",
+			"requires": {},
+			"type": "Manifest",
+			"build": true,
+			"mode": "file_group",
+			"form_c_path": "{pack_path}/{name}",
+			"path": "/home/kimyh/library/logie",
+			"include": [
+				".hash_cache.json",
+				"package.lock",
+				"requirements.txt"
+			],
+			"bundle": [],
+			"exclude": [],
+			"untracked": [
+				".hash_cache.json",
+				"package.lock"
+			]
+		}
+	],
+	"build": {
+		"version": "0.0.0",
+		"match": "0.0.0"
+	}
+}

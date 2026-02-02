@@ -44,7 +44,7 @@ include-package-data = true
 # find_packages() 와 동일하게 현재 디렉토리 기준 자동 검색
 where = ["."]
 # 필요 시 제외할 패키지 지정 가능
-# @log: bin, scripts 를 제외목록에 추가
+# [0.0.1] @done_log: bin, scripts 를 제외목록에 추가
 exclude = ["test/", "scripts/"]
 
 [tool.setuptools.package-data]

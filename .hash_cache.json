@@ -1,0 +1,18 @@
+﻿{
+	"/home/kimyh/library/logie/docs_ver": {
+		".gitkeep": "b5d260e4c5a2ae1f815e45d963a96cf2297e7d1fbdca12149a90b835f18d9a6c"
+	},
+	"/home/kimyh/library/logie/scripts": {
+		"upload.py": "c7a46d04c86515083312b9a3012d8908fbae25cedf427f320e0167e5db834895",
+		"sync_dependencies.py": "610878a06b63d98a017c3027490af2d2986e21634a284d11893f81212c144eb5"
+	},
+	"/home/kimyh/library/logie/src/logie": {
+		"docsutils/docsutils.py": "8c7a5ff6be0a0ace6caa2c1bba25566597c92a9fd5440603cc89d996aec67cbb",
+		"utils/__init__.py": "a9e6010980889083b55f4552df1d8a52b29377e632428e8ca5db27e60fd1511d",
+		"utils/utils.py": "e49b96ee14921be740bef047fff4af1dd2fa31ba9ba860c0583910847d954d4b"
+	},
+	"/home/kimyh/library/logie/.spec_grp": {
+		".cruft.json": "006c752af236f15703730b478b2dd051d5b2885bd060faa6cca30bdbb6df97f4",
+		"manifest.json": "fc0e66fb59a79ddcc4bf7aa17b61391de6e9ded5d584f65a1c90a7c74018ae48"
+	}
+}
