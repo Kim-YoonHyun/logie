@@ -9,7 +9,6 @@ from datetime import datetime
 
 __all__ = ['tmp2new', 'delete_tmp', "documenting", "log2donelog", "extract_log"]
 
-
 # [0.1.0] @done_log: 함수 `tmp2new` 추가
 # [0.1.0] @done_log: 함수 `tmp2new` 에 정말로 실행할 것인지 여부 묻는 부분 추가
 def tmp2new(path):

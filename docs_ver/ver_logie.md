@@ -17,3 +17,11 @@
  - `extract_logs_from_file` 의 함수명을 `extract_log` 로 변경
 - New: /home/kimyh/library/logie/src/logie/utils/__init__.py
 - New: /home/kimyh/library/logie/src/logie/utils/utils.py
+
+
+
+## 2026-02-02 Version 0.1.1
+**Tag:** @Patch<br>
+**Summary:** import 오류 수정<br>
+**Detail:**<br>
+- Modified: /home/kimyh/library/logie/src/logie/docsutils/docsutils.py

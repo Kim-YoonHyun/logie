@@ -33,3 +33,11 @@
 **Summary:** 모듈 업데이트<br>
 **Detail:**<br>
 -  .integrity_grp version (0.0.0) --> (0.0.1)
+
+
+
+## 2026-02-02 Version 0.2.6
+**Tag:** @Patch<br>
+**Summary:** 모듈 업데이트<br>
+**Detail:**<br>
+-           logie version (0.1.0) --> (0.1.1)
