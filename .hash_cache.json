@@ -14,5 +14,8 @@
 	"/home/kimyh/library/logie/.spec_grp": {
 		".cruft.json": "006c752af236f15703730b478b2dd051d5b2885bd060faa6cca30bdbb6df97f4",
 		"manifest.json": "fc0e66fb59a79ddcc4bf7aa17b61391de6e9ded5d584f65a1c90a7c74018ae48"
+	},
+	"/home/kimyh/library/logie/.integrity_grp": {
+		"requirements.txt": "f3f1ec3d4fb9869ba2d221ad103301d2c5172beda9fd3aa6045a509b63623369"
 	}
 }

@@ -2,14 +2,14 @@
 	"user_version": "0.0",
 	"package": {
 		"name": "logie",
-		"version": "0.2.5",
+		"version": "0.2.4",
 		"resolved": {
 			"docs": "0.0.0",
 			"docs_ver": "0.0.1",
 			"scripts": "0.1.2",
 			"logie": "0.1.0",
 			".spec_grp": "0.0.1",
-			".integrity_grp": "0.0.1"
+			".integrity_grp": "0.0.0"
 		},
 		"exclude": [
 			"__pycache__",
@@ -111,7 +111,7 @@
 		},
 		{
 			"name": ".integrity_grp",
-			"version": "0.0.1",
+			"version": "0.0.0",
 			"requires": {},
 			"type": "Manifest",
 			"build": true,
