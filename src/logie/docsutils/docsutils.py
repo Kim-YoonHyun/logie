@@ -7,20 +7,42 @@ import semver
 from datetime import datetime
 
 
-__all__ = ['tmp2new', 'delete_tmp', "documenting", "log2donelog", "extract_logs_from_file", "version_up"]
+__all__ = ['tmp2new', 'delete_tmp', "documenting", "log2donelog", "extract_log"]
 
 
 # @log: 함수 `tmp2new` 추가
+# @log: 함수 `tmp2new` 에 정말로 실행할 것인지 여부 묻는 부분 추가
 def tmp2new(path):
-    for root, dirs, files in os.walk(path):
-        for file in files:
-            if ".tmp" in file:
-                new_file = file.split(".tmp")[0]
-                # print(root, file, new_file)
-                tmp = os.path.join(root, file)
-                new = os.path.join(root, new_file)
-                os.replace(tmp, new)
-                print(f"{new} 저장되었습니다. (.tmp 삭제)")
+    string = textwrap.dedent(
+        f"""
+        모든 .tmp 파일을 원본으로 적용하시겠습니까?
+        0: 취소, 1: 진행
+        """
+    )
+    while True:
+        try:
+            do = int(input(string))
+            if do in [0, 1]:
+                break
+            else:
+                print("0 또는 1 을 입력하십시오.")
+        except Exception:
+            print("0 또는 1 을 입력하십시오.")
+    
+    if do == 1:
+        for root, dirs, files in os.walk(path):
+            for file in files:
+                if ".tmp" in file:
+                    new_file = file.split(".tmp")[0]
+                    # print(root, file, new_file)
+                    tmp = os.path.join(root, file)
+                    new = os.path.join(root, new_file)
+                    os.replace(tmp, new)
+                    print(f"{new} 저장되었습니다. (.tmp 삭제)")
+    else:
+        print(f".tmp 를 원본으로 교체하지 않습니다.")
+        
+    return do
 
 
 # @log: 함수 `delete_tmp` 추가
@@ -34,36 +56,38 @@ def delete_tmp(path):
     # 결정
     while True:
         try:
-            tmp_del = int(input(string))
-            if tmp_del in [0, 1]:
+            do = int(input(string))
+            if do in [0, 1]:
                 break
             else:
                 print("0 또는 1 을 입력하십시오.")
         except Exception:
             print("0 또는 1 을 입력하십시오.")
-    # 보존
-    if tmp_del == 0:
-        print('tmp 파일을 보존합니다.')
     # 삭제
-    elif tmp_del == 1:
+    if do == 1:
         for root, dirs, files in os.walk(path):
             for file in files:
                 if ".tmp" in file:
                     tmp = os.path.join(root, file)
                     os.remove(tmp)
         print("생성된 모든 .tmp 파일을 삭제합니다.")
+    # 보존
+    else:
+        print('tmp 파일을 보존합니다.')
+    
 
 
 # @log: 기본적인 README 기록 형태를 제공하는 함수 `documenting` 추가
 # @log: 함수 `documenting` 내부에 README.md.tmp 파일 생성 추가
 # @log: 함수 `documenting` 에 덮어씌우기 인자 `overwrite` 추가
+# @log: 함수 `documenting` 에 출력 값에 줄바꿈인자를 포함
 def documenting(tag, summary, version, log_contents, docs_path, docs_name="README.md", overwrite=False):
     now = datetime.now()
 
-    log_entry = f'\n### {now.strftime("%Y-%m-%d")} Version {version}\n'
-    log_entry += f"**tag:** @{tag}\n"
-    log_entry += f"**Summary:** {summary}\n"
-    log_entry += "**Detail:**\n"
+    log_entry = f'\n## {now.strftime("%Y-%m-%d")} Version {version}\n'
+    log_entry += f"**Tag:** @{tag}<br>\n"
+    log_entry += f"**Summary:** {summary}<br>\n"
+    log_entry += "**Detail:**<br>\n"
     log_entry += log_contents
 
     if not isinstance(overwrite, bool):
@@ -117,7 +141,8 @@ def log2donelog(file_path, version=None):
         pass
 
 
-def extract_logs_from_file(file_path):
+# @log: `extract_logs_from_file` 의 함수명을 `extract_log` 로 변경
+def extract_log(file_path):
     """
     파일 내부 주석 중 에서 @log: 로 시작하는 주석 문구를 추출합니다.
     """
@@ -137,65 +162,3 @@ def extract_logs_from_file(file_path):
         pass
     
     return logs
-
-
-# @log: version_up 함수
-def version_up(name, pre_version):
-    tag_dict = {
-        1:"Major-Release",
-        2:"Feature",
-        3:"Patch",
-        4:"Refactoring",
-        5:"Test",
-        6:"Post-release",
-        0:"Ignore"
-    }
-    tag_key_list = list(tag_dict.keys())
-    min_tag = min(tag_key_list)
-    max_tag = max(tag_key_list)
-
-    # 버전 문자열 연산화
-    if pre_version == "":
-        pre_version = "0.0.0"
-    v = semver.Version.parse(pre_version)
-
-    # 버전 변경 입력값 받기
-    string = textwrap.dedent(
-        """
-        ------------------------------------------------------------
-        | 1 : Major-Release | Major      | 1.1.12 --> 2.0.0        |
-        | 2 : Feature       | Minor      | 1.1.12 --> 1.2.0        |
-        | 3 : Patch         | Patch      | 1.1.12 --> 1.1.13       |
-        | 4 : Refactoring   | Patch      | 1.1.12 --> 1.1.13       |
-        | 5 : Test          | Identifier | 1.1.12 --> 1.1.12+test1 |
-        | 6 : Post-release  | Identifier | 1.1.12 --> 1.1.12post1  |
-        | 0 : Ignore        | Ignore     | 1.1.12 --> 1.1.12       |
-        ------------------------------------------------------------
-        """
-    )
-    print(string)
-    while True:
-        try:
-            tag = int(input(f"{name}({pre_version}) 버전 업 태그를 입력 :"))
-            if tag not in tag_key_list:
-                print(f'잘못된 입력값입니다. {min_tag} ~ {max_tag} 사이의 값을 입력해주세요')
-            else:
-                break
-        except Exception:
-            print(f'잘못된 입력값입니다. {min_tag} ~ {max_tag} 사이의 값을 입력해주세요')
-
-    # ==============================================================
-    # 새 버전 변경 적용
-    if tag == 1:
-        new_version = str(v.bump_major())
-    elif tag == 2:
-        new_version = str(v.bump_minor())
-    elif tag in [3, 4]:
-        new_version = str(v.bump_patch())
-    elif tag in [5, 6]:
-        new_version = input(f"변경 버전 직접 입력 --> ")
-    elif tag == 0:
-        new_version = pre_version
-    tag_text = tag_dict[tag]
-
-    return new_version, tag_text

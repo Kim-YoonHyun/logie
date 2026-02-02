@@ -1,6 +1,6 @@
 {
   "template": "https://github.com/Kim-YoonHyun/baseline_lib",
-  "commit": "81d11323438fa5141070502b082929119536121c",
+  "commit": "180ad4dbea8dd032487a71e6241a3019f31adafc",
   "checkout": null,
   "context": {
     "cookiecutter": {
@@ -11,7 +11,7 @@
       "author_name": "kimyh",
       "email": "kim_yh663927@naver.com",
       "_template": "https://github.com/Kim-YoonHyun/baseline_lib",
-      "_commit": "81d11323438fa5141070502b082929119536121c"
+      "_commit": "180ad4dbea8dd032487a71e6241a3019f31adafc"
     }
   },
   "directory": null
