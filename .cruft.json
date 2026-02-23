@@ -1,5 +1,5 @@
 {
-  "template": "https://github.com/Kim-YoonHyun/baseline_lib",
+  "template": "https://github.com/Kim-YoonHyun/baseline_product",
   "commit": "9a44445158d6369fd34ca2e1b4155786a0e626a1",
   "checkout": null,
   "context": {
@@ -10,7 +10,7 @@
       "python_ver": ">=3.7",
       "author_name": "kimyh",
       "email": "kim_yh663927@naver.com",
-      "_template": "https://github.com/Kim-YoonHyun/baseline_lib",
+      "_template": "https://github.com/Kim-YoonHyun/baseline_product",
       "_commit": "9a44445158d6369fd34ca2e1b4155786a0e626a1"
     }
   },
