@@ -1,17 +1,17 @@
 {
   "template": "https://github.com/Kim-YoonHyun/baseline_product",
-  "commit": "9a44445158d6369fd34ca2e1b4155786a0e626a1",
+  "commit": "77acd18dd450b68987baedad66a3bdf601cc67bc",
   "checkout": null,
   "context": {
     "cookiecutter": {
-      "package_name": "logie",
-      "version": "0.2.0",
-      "description": "로그 활용 패키지",
-      "python_ver": ">=3.7",
+      "name": "logie",
+      "type": "package",
+      "description": "로그 설정용 패키지",
+      "python_ver": "3.11",
       "author_name": "kimyh",
-      "email": "kim_yh663927@naver.com",
+      "email": "kimyh663927@naver.com",
       "_template": "https://github.com/Kim-YoonHyun/baseline_product",
-      "_commit": "9a44445158d6369fd34ca2e1b4155786a0e626a1"
+      "_commit": "77acd18dd450b68987baedad66a3bdf601cc67bc"
     }
   },
   "directory": null

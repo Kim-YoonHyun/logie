@@ -4,3 +4,5 @@ test/
 dist/
 build/
 *.egg-info
+old
+log

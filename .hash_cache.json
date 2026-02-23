@@ -1,21 +1,34 @@
 ﻿{
-	"/home/kimyh/library/logie/docs_ver": {
-		".gitkeep": "b5d260e4c5a2ae1f815e45d963a96cf2297e7d1fbdca12149a90b835f18d9a6c"
+	"schema_version": "v2",
+	"/home/kimyh/library/logie/docs": {
+		"documenting.md": "bba3cd3077756c4c6e941bc144f0d0878a16d5ab494bab9ed9edf58c3d3ca55a",
+		"get_logger.md": "115dd5eea87d03e83505365210b993656814694884e7d6d735ed53a477636231",
+		"tmp2new.md": "e733f5bdff0cfa7fa5120209b1ebaddb97c6c88d8e3c6da5f6768ee6c39ee502",
+		"log2donelog.md": "93a5bd05e41e82dadcb2abe016c38237dd5311badc261c2fbdf836a7af75e614",
+		"extract_log.md": "827fb6f7eb7acf5b36f766c732781c7428cbcd819559ea55d0e921d86eee1236",
+		"delete_tmp.md": "f4e3289fb7b11e90f738d99ba98428e69ff47ca83878e31c2d92a737f0ff5484",
+		"log_sort.md": "ecd908b707c083eaaa16d02ffaf88fcbd5cdbc6485194e5769732f10ba2e9e01"
 	},
+	"/home/kimyh/library/logie/docs_ver": {},
 	"/home/kimyh/library/logie/scripts": {
-		"upload.py": "c7a46d04c86515083312b9a3012d8908fbae25cedf427f320e0167e5db834895",
-		"sync_dependencies.py": "610878a06b63d98a017c3027490af2d2986e21634a284d11893f81212c144eb5"
+		"upload.py": "f0287c58ce5beab3bf2c73eea78c4b6ff1cc28008ed573a7944c9f1857d33ea3",
+		"sync_dependencies.py": "41c8e240c600d6c9655db653893c097598e72311988b749305e10847b2a10c17",
+		"get_hash_cache.py": "b14b281fa91f985545c8b9ba62dc4d2d81521a530dea310044fed25c4dfc6415"
 	},
 	"/home/kimyh/library/logie/src/logie": {
-		"docsutils/docsutils.py": "6007070787ca65ac045457eec8d58803cda2b340f503d77dcc673f0bbd0bc3ad",
-		"utils/__init__.py": "a9e6010980889083b55f4552df1d8a52b29377e632428e8ca5db27e60fd1511d",
-		"utils/utils.py": "e49b96ee14921be740bef047fff4af1dd2fa31ba9ba860c0583910847d954d4b"
+		"__init__.py": "2ed13799a6475f4a064633c42a332e161079058cd4f8cbc453573286d5c15adf",
+		"utils/utils.py": "a97c76395f6cda1854646cfc4e8a7c3892a775a227ea545d68742b35cd204bc1",
+		"utils/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+		"logutils/__init__.py": "0e5aaba564d4af653c9c43712a4a9ec57496645f6c49cbe477aba6b95e0d49b2",
+		"logutils/logutils.py": "9c911387ac4f4f16ed5aae5a520a19cc0a961dde8140c88213cdb92e6200f74a",
+		"docsutils/__init__.py": "33c1d4bfdb5fdb183595e1c1234a41a239da2daa7781226ea4e8a89b1cea825a",
+		"docsutils/docsutils.py": "fedb5729322fd0216ec1dd519322bc50e3b4c9a11c166a41f9c932e3aae393d7"
 	},
 	"/home/kimyh/library/logie/.spec_grp": {
-		".cruft.json": "006c752af236f15703730b478b2dd051d5b2885bd060faa6cca30bdbb6df97f4",
-		"manifest.json": "fc0e66fb59a79ddcc4bf7aa17b61391de6e9ded5d584f65a1c90a7c74018ae48"
+		".cruft.json": "e3c33eca213b393c8f06dfa5697883deebb8b2f515c7f6e422b722383e1da974",
+		"manifest.json": "416a3892a81d86d39333e8f7339fc158dc7c46bbc488ab5181ced378a07f72f9"
 	},
 	"/home/kimyh/library/logie/.integrity_grp": {
-		"requirements.txt": "f3f1ec3d4fb9869ba2d221ad103301d2c5172beda9fd3aa6045a509b63623369"
+		"requirements.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
 	}
 }

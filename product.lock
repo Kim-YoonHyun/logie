@@ -1,34 +1,33 @@
 ﻿{
 	"user_version": "0.0",
-	"package": {
+	"product": {
 		"name": "logie",
-		"version": "0.2.6",
+		"version": "0.2.7",
 		"resolved": {
-			"docs": "0.0.0",
+			"docs": "0.0.1",
 			"docs_ver": "0.0.1",
-			"scripts": "0.1.2",
+			"scripts": "0.2.0",
 			"logie": "0.1.1",
-			".spec_grp": "0.0.1",
+			".spec_grp": "0.1.0",
 			".integrity_grp": "0.0.1"
 		},
+		"hash": "",
+		"hash_schema_version": "v2",
 		"exclude": [
-			"__pycache__",
-			"old",
-			"__version__.py",
 			"*.tmp",
-			"*.lock",
-			"*-info"
+			"*-info",
+			".gitkeep"
 		]
 	},
 	"component": [
 		{
 			"name": "docs",
-			"version": "0.0.0",
+			"version": "0.0.1",
 			"requires": {},
 			"type": "Document",
 			"build": true,
 			"mode": "dir",
-			"form_c_path": "{pack_path}/{name}",
+			"form_c_path": "{product_path}/{name}",
 			"path": "/home/kimyh/library/logie/docs",
 			"include": [
 				"*"
@@ -44,7 +43,7 @@
 			"type": "Document",
 			"build": false,
 			"mode": "dir",
-			"form_c_path": "{pack_path}/{name}",
+			"form_c_path": "{product_path}/{name}",
 			"path": "/home/kimyh/library/logie/docs_ver",
 			"include": [
 				"*"
@@ -57,12 +56,12 @@
 		},
 		{
 			"name": "scripts",
-			"version": "0.1.2",
+			"version": "0.2.0",
 			"requires": {},
 			"type": "Tool",
 			"build": false,
 			"mode": "dir",
-			"form_c_path": "{pack_path}/{name}",
+			"form_c_path": "{product_path}/{name}",
 			"path": "/home/kimyh/library/logie/scripts",
 			"include": [
 				"*"
@@ -78,7 +77,7 @@
 			"type": "Module",
 			"build": true,
 			"mode": "dir",
-			"form_c_path": "{src_path}/{name}",
+			"form_c_path": "{product_path}/src/{name}",
 			"path": "/home/kimyh/library/logie/src/logie",
 			"include": [
 				"*"
@@ -89,12 +88,12 @@
 		},
 		{
 			"name": ".spec_grp",
-			"version": "0.0.1",
+			"version": "0.1.0",
 			"requires": {},
 			"type": "Manifest",
 			"build": true,
 			"mode": "file_group",
-			"form_c_path": "{pack_path}/{name}",
+			"form_c_path": "{product_path}/{name}",
 			"path": "/home/kimyh/library/logie",
 			"include": [
 				".cruft.json",
@@ -116,18 +115,18 @@
 			"type": "Manifest",
 			"build": true,
 			"mode": "file_group",
-			"form_c_path": "{pack_path}/{name}",
+			"form_c_path": "{product_path}/{name}",
 			"path": "/home/kimyh/library/logie",
 			"include": [
 				".hash_cache.json",
-				"package.lock",
+				"product.lock",
 				"requirements.txt"
 			],
 			"bundle": [],
 			"exclude": [],
 			"untracked": [
 				".hash_cache.json",
-				"package.lock"
+				"product.lock"
 			]
 		}
 	],
